@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Characters</h1>
+<div class="search-container">
+    <input type="text" id="charSearch" placeholder="Search by name...">
+</div>
+<div id="charactersList" class="characters-grid">
+    <p>Loading characters...</p>
+</div>
+<div class="pagination">
+    <button id="prevBtn" disabled>Previous</button>
+    <span id="pageInfo">Page 1</span>
+    <button id="nextBtn">Next</button>
+</div>
+<div id="charModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+<div id="chatModal" class="modal">
+    <div class="modal-content chat-modal-content">
+        <span class="close-chat">&times;</span>
+        <h2 id="chatWithTitle">Chat with</h2>
+        <div id="chatMessages" class="chat-messages"></div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="sendChatBtn">Send</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

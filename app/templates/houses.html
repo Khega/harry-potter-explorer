@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Hogwarts Houses</h1>
+<div class="houses-grid">
+    {% for house in houses %}
+    <div class="house-card {{ house.name.lower() }}">
+        <h2>{{ house.name }}</h2>
+        <p><strong>Colors:</strong> {{ house.colors }}</p>
+        <p><strong>Animal:</strong> {{ house.animal }}</p>
+        <p><strong>Traits:</strong> {{ house.traits }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
